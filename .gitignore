@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Compiled class file
 *.class
 
@@ -22,3 +24,25 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+.env
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+/e2e/cypress/screenshots/
+/e2e/cypress/videos/
+/e2e/cypress/report/
+.idea/
+# testing
+/coverage
+
+# production
+/dist
+build
+package-lock.json
+
+ 
+
+# misc
+.DS_Store

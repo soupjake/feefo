@@ -1,8 +1,8 @@
 package com.example.feefo.controller;
 
 import com.example.feefo.service.TitleService;
-import org.springframework.web.bind.annotation.*;
 import java.util.Map;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/title")

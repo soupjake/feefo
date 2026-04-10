@@ -1,9 +1,9 @@
 package com.example.feefo.service;
 
-import org.junit.jupiter.api.Test;
-import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Map;
+import org.junit.jupiter.api.Test;
 
 class TitleServiceTest {
 
@@ -22,7 +22,7 @@ class TitleServiceTest {
         assertThat((Double) response.get("score")).isEqualTo(0.5);
     }
 
-	@Test
+    @Test
     void shouldMatchSoftwareEngineerFull() {
         // Given
         String input = "Software engineer";
@@ -48,7 +48,7 @@ class TitleServiceTest {
         assertThat((Double) response.get("score")).isEqualTo(0.5);
     }
 
-	@Test
+    @Test
     void shouldMatchAccountantFull() {
         // Given
         String input = "Accountant";

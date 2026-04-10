@@ -1,18 +1,17 @@
 package com.example.feefo.service;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.*;
+
 import com.example.feefo.model.Rating;
 import com.example.feefo.model.RatingSummary;
 import com.example.feefo.repository.RatingRepository;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat; // The missing assertions
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class RatingServiceTest {
@@ -93,8 +92,8 @@ class RatingServiceTest {
     void shouldMaintainDescendingOrder() {
         // Given
         List<Rating> ratings = List.of(
-            new Rating(1), 
-            new Rating(3), 
+            new Rating(1),
+            new Rating(3),
             new Rating(5)
         );
 

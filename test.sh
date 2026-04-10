@@ -15,16 +15,20 @@ else
 fi
 cd ..
 
-# # Run frontend tests
-# echo -e "\n${GREEN}Running Frontend Tests...${NC}"
-# if [ -d "./frontend" ]; then
-#     cd frontend || exit
-#     # Once you have React/Vue/Angular setup, this usually is:
-#     # npm test -- --watchAll=false
-#     echo "Frontend directory found. Add 'npm test' here later."
-#     cd ..
-# else
-#     echo "No frontend directory found. Skipping..."
-# fi
+# Run frontend tests
+echo -e "\n${GREEN}Running Frontend Tests...${NC}"
+if [ -d "./frontend" ]; then
+    cd frontend || exit
+    
+    if npm run test -- run; then
+        echo -e "${GREEN}Frontend tests passed!${NC}"
+    else
+        echo -e "${RED}Frontend tests failed!${NC}"
+        exit 1
+    fi
+    cd ..
+else
+    echo "No frontend directory found. Skipping..."
+fi
 
-echo -e "\n${GREEN}--- All tests completed successfully ---${NC}"
+echo -e "\n${GREEN}All tests completed successfully${NC}"

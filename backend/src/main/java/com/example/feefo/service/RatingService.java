@@ -3,13 +3,12 @@ package com.example.feefo.service;
 import com.example.feefo.model.Rating;
 import com.example.feefo.model.RatingSummary;
 import com.example.feefo.repository.RatingRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Service;
 
 @Service
 public class RatingService {
@@ -54,13 +53,13 @@ public class RatingService {
 
         return ratings.stream()
             .collect(Collectors.groupingBy(
-                Rating::getScore, 
+                Rating::getScore,
                 Collectors.counting()
             ))
             .entrySet().stream()
             .map(entry -> {
-                long count = entry.getValue(); 
-                double average = (double) count / totalRatings; 
+                long count = entry.getValue();
+                double average = (double) count / totalRatings;
                 return new RatingSummary(entry.getKey(), count, average);
             })
             .sorted(Comparator.comparingInt(RatingSummary::getScore).reversed())

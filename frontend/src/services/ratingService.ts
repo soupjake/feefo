@@ -2,8 +2,7 @@ const baseUrl = "http://localhost:3000/rating"
 
 export const getRatings = async () => {
     try {
-        const url = `${baseUrl}`
-        const response = await fetch(url, {
+        const response = await fetch(baseUrl, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

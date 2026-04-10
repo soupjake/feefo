@@ -3,6 +3,7 @@ import { useAppDispatch } from "./hooks/storeHooks"
 import { initFetch } from "./store/initThunks"
 import { RatingsOverall } from "./components/ratingsoverall/RatingsOverall"
 import { Ratings } from "./components/ratings/Ratings"
+import { TitleInput } from "./components/titleinput/TitleInput"
 
 function App() {
     const dispatch = useAppDispatch()
@@ -15,6 +16,7 @@ function App() {
         <>
             <RatingsOverall />
             <Ratings />
+            <TitleInput />
         </>
     )
 }

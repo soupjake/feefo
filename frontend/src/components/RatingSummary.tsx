@@ -1,15 +1,15 @@
-import type { Rating } from "../types/rating";
+import type { Rating } from "../types/rating"
 
 type Props = {
-  rating: Rating;
-};
+    rating: Rating
+}
 
 export const RatingSummary = (props: Props) => {
-  const { rating } = props;
+    const { rating } = props
 
-  return (
-    <div>
-      <p>{`${rating.score} : ${rating.count} : ${rating.average}`}</p>
-    </div>
-  );
-};
+    return (
+        <div>
+            <p>{`${rating.score} : ${rating.count} : ${rating.average}`}</p>
+        </div>
+    )
+}

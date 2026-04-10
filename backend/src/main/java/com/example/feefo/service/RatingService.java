@@ -1,11 +1,15 @@
 package com.example.feefo.service;
 
 import com.example.feefo.model.Rating;
+import com.example.feefo.model.RatingSummary;
 import com.example.feefo.repository.RatingRepository;
 import org.springframework.stereotype.Service;
-import java.util.List;
+
 import java.util.ArrayList;
-import java.util.stream.Stream;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class RatingService {
@@ -38,7 +42,28 @@ public class RatingService {
         }
 
         ratingRepository.saveAll(ratingsToSave);
-
         System.out.println("Added " + count + " ratings of value " + score + " to the database");
+    }
+
+    public List<RatingSummary> sortRatings(List<Rating> ratings) {
+        if (ratings == null || ratings.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        int totalRatings = ratings.size();
+
+        return ratings.stream()
+            .collect(Collectors.groupingBy(
+                Rating::getScore, 
+                Collectors.counting()
+            ))
+            .entrySet().stream()
+            .map(entry -> {
+                long count = entry.getValue(); 
+                double average = (double) count / totalRatings; 
+                return new RatingSummary(entry.getKey(), count, average);
+            })
+            .sorted(Comparator.comparingInt(RatingSummary::getScore).reversed())
+            .collect(Collectors.toList());
     }
 }

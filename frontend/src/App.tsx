@@ -1,8 +1,8 @@
 import { useEffect } from "react"
 import { useAppDispatch } from "./hooks/storeHooks"
 import { initFetch } from "./store/initThunks"
-import { RatingsOverall } from "./components/RatingsOverall"
-import { Ratings } from "./components/Ratings"
+import { RatingsOverall } from "./components/ratingsoverall/RatingsOverall"
+import { Ratings } from "./components/ratings/Ratings"
 
 function App() {
     const dispatch = useAppDispatch()

@@ -5,7 +5,6 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 8px;
-    padding: 16px;
 `
 
 export const Label = styled.p`

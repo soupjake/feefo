@@ -1,14 +1,14 @@
 import { useMemo } from "react"
 import * as S from "./RatingsOverall.styles"
-import { useAppSelector } from "../hooks/storeHooks"
+import { useAppSelector } from "../../hooks/storeHooks"
 import {
     selectRatingsOverall,
     selectRatingsError,
     selectRatingsLoading,
-} from "../store/rating/ratingSelectors"
-import { getRatingLabel } from "../helpers/ratingHelpers"
-import logo from "../assets/logo.svg"
-import { StarRatings } from "./StarRatings"
+} from "../../store/rating/ratingSelectors"
+import { getRatingLabel } from "../../helpers/ratingHelpers"
+import logo from "../../assets/logo.svg"
+import { StarRatings } from "../starratings/StarRatings"
 
 export const RatingsOverall = () => {
     const overall = useAppSelector(selectRatingsOverall)
@@ -24,7 +24,7 @@ export const RatingsOverall = () => {
     return (
         <S.Container>
             <S.Label>{label}</S.Label>
-            <StarRatings rating={overall}  />
+            <StarRatings rating={overall} />
             <S.ScoreText>{`${overall} OUT OF 5`}</S.ScoreText>
             <S.ProductRating>
                 Product Rating

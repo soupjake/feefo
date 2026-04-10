@@ -1,21 +1,20 @@
-const baseUrl = "http://localhost:3000/quote"
+const baseUrl = "http://localhost:3000/rating"
 
-export const getQuote = async (id: string, lat: number, lng: number) => {
+export const getRatings = async () => {
   try {
     const url = `${baseUrl}`
     const response = await fetch(url, {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ id, lat, lng })
     })
 
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`)
     }
 
-    return await response.text()
+    return await response.json()
   } catch (error) {
     console.error(error)
   }

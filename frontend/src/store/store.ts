@@ -1,10 +1,8 @@
 import { configureStore, combineReducers, type ThunkAction, type Action } from "@reduxjs/toolkit";
-import driverReducer from "./driver/driverSlice";
-import userReducer from "./user/userSlice";
+import ratingReducer from "./rating/ratingSlice";
 
 const rootReducer = combineReducers({
-    driver: driverReducer,
-    user: userReducer
+    rating: ratingReducer
 });
 
 export const store = configureStore({

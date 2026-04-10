@@ -4,10 +4,10 @@ import {
     selectRatingsError,
     selectRatingsLoading,
 } from '../store/rating/ratingSelectors'
-import type { Ratings } from '../types/rating'
-import { RatingsItem } from './RatingsItem'
+import type { Rating } from '../types/rating'
+import { RatingSummary } from './RatingSummary'
 
-export const RatingScores = () => {
+export const Ratings = () => {
     const ratings = useAppSelector(selectRatings)
     const loading = useAppSelector(selectRatingsLoading)
     const error = useAppSelector(selectRatingsError)
@@ -22,7 +22,7 @@ export const RatingScores = () => {
     
     return (
         <div>
-            {ratings.map((item: Ratings) => <RatingsItem item={item} />)}
+            {ratings.map((rating: Rating) => <RatingSummary rating={rating} />)}
         </div>
     )
 }

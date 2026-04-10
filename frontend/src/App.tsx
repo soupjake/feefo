@@ -14,8 +14,10 @@ function App() {
 
     return (
         <>
-            <RatingsOverall />
-            <Ratings />
+            <div className="ratings">
+                <RatingsOverall />
+                <Ratings />
+            </div>
             <TitleInput />
         </>
     )

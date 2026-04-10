@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
     display: flex;
     gap: 2px;
+    margin: 12px 0px;
 `
 
 export const StarContainer = styled.div`

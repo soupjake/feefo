@@ -14,10 +14,10 @@ export const getTitle = async (input: string) => {
             throw new Error(`Response status: ${response.status}`)
         }
 
-        const { result, score } = await response.json();
+        const { result, score } = await response.json()
 
-        console.log(`Title score: ${score}`);
-        console.log(`Title result: ${result}`);
+        console.log(`Title score: ${score}`)
+        console.log(`Title result: ${result}`)
 
         return result
     } catch (error) {

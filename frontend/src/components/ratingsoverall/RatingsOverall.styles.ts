@@ -9,7 +9,8 @@ export const Container = styled.div`
 
 export const Label = styled.p`
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
     margin: 0;
     text-transform: uppercase;
     color: #333333;
@@ -27,6 +28,7 @@ export const ProductRating = styled.div`
     align-items: center;
     font-weight: 600;
     color: #646c76;
+    margin-bottom: 32px;
 `
 
 export const Logo = styled.img`

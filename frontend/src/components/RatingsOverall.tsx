@@ -8,6 +8,7 @@ import {
 } from "../store/rating/ratingSelectors"
 import { getRatingLabel } from "../helpers/ratingHelpers"
 import logo from "../assets/logo.svg"
+import { StarRatings } from "./StarRatings"
 
 export const RatingsOverall = () => {
     const overall = useAppSelector(selectRatingsOverall)
@@ -23,12 +24,12 @@ export const RatingsOverall = () => {
     return (
         <S.Container>
             <S.Label>{label}</S.Label>
-            <S.StyledRate allowHalf disabled value={overall} />
+            <StarRatings rating={overall}  />
             <S.ScoreText>{`${overall} OUT OF 5`}</S.ScoreText>
-            <S.Rating>
+            <S.ProductRating>
                 Product Rating
                 <S.Logo src={logo} alt="Feefo Logo" width="140" />
-            </S.Rating>
+            </S.ProductRating>
         </S.Container>
     )
 }

@@ -1,5 +1,4 @@
 import { useEffect } from "react"
-import "./App.css"
 import { useAppDispatch } from "./hooks/storeHooks"
 import { initFetch } from "./store/initThunks"
 import { RatingsOverall } from "./components/RatingsOverall"
@@ -14,7 +13,6 @@ function App() {
 
     return (
         <>
-            <span className="logo">⭐ 😎 ⭐</span>
             <RatingsOverall />
             <Ratings />
         </>

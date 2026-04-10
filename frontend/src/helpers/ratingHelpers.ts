@@ -1,6 +1,6 @@
 import type { Rating } from "../types/rating"
 
-export const calculateOverall = (ratings: Rating[]): number => {
+export const calculateOverall = (ratings: Rating[]) => {
     if (ratings.length === 0) {
         return 0
     }
@@ -20,4 +20,20 @@ export const calculateOverall = (ratings: Rating[]): number => {
     const average = totalPoints / totalCount
 
     return Math.round(average * 10) / 10
+}
+
+export const getRatingLabel = (average: number) => {
+    if (average >= 4) {
+        return "Excellent"
+    }
+
+    if (average >= 3) {
+        return "Good"
+    }
+
+    if (average >= 2) {
+        return "Average"
+    }
+
+    return "Bad"
 }

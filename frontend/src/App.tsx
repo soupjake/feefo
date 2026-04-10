@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './App.css'
 import { useAppDispatch } from './hooks/storeHooks'
 import { initFetch } from './store/initThunks'
-import { Ratings } from './components/Ratings'
+import { RatingScores } from './components/RatingScores'
 
 function App() {
   const dispatch = useAppDispatch()
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <span className='logo'>⭐ 😎 ⭐</span>
-      <Ratings />
+      <RatingScores />
     </>
   )
 }

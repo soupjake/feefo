@@ -1,8 +1,9 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
-import type { Rating } from "../../types/rating"
+import type { Rating, Ratings } from "../../types/rating"
+import { sortRatings } from "../../helpers/ratingHelpers"
 
 type RatingState = {
-  ratings: Rating[]
+  ratings: Ratings[]
   loading: boolean
   error: boolean
 }
@@ -18,7 +19,7 @@ export const ratingSlice = createSlice({
   initialState,
   reducers: {
     setRatings: (state: RatingState, action: PayloadAction<Rating[]>) => {
-      state.ratings = action.payload
+      state.ratings = sortRatings(action.payload)
     },
     setLoading: (state: RatingState, action: PayloadAction<boolean>) => {
       state.loading = action.payload

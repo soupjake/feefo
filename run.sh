@@ -15,7 +15,7 @@ fi
 
 
 # Wait time (seconds) before starting frontend
-BACKEND_WAIT_SECONDS="${BACKEND_WAIT_SECONDS:-5}"
+BACKEND_WAIT_SECONDS="${BACKEND_WAIT_SECONDS:-10}"
 
 # Run backend
 cd backend

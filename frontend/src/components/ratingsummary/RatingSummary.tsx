@@ -1,6 +1,6 @@
 import * as S from "./RatingSummary.styles"
 import type { Rating } from "../../types/rating"
-import star from "../../assets/star.svg"
+import star_grey from "../../assets/star_grey.svg"
 
 type Props = {
     rating: Rating
@@ -15,7 +15,7 @@ export const RatingSummary = (props: Props) => {
         <S.Container>
             <S.Score>
                 {rating.score}
-                <S.StarIcon src={star} alt="star-icon" />
+                <S.StarIcon src={star_grey} alt="star-icon" />
             </S.Score>
             <S.ProgressBar>
                 <S.ProgressBarFill $width={width} />

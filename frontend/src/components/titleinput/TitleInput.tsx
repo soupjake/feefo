@@ -31,7 +31,7 @@ export const TitleInput = () => {
                     value={inputValue}
                     onChange={handleChange}
                 />
-                <S.Button type="submit" disabled={loading || !inputValue}>
+                <S.Button type="submit" disabled={loading}>
                     {loading ? "Normalising..." : "Normalise"}
                 </S.Button>
             </S.Form>

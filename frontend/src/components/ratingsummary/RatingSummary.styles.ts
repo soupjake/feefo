@@ -9,25 +9,29 @@ export const Container = styled.div`
 `
 
 export const Score = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     font-size: 1rem;
+    font-weight: 600;
     width: 60px;
     flex-shrink: 0;
     color: #333333;
-    text-align: right;
+`
+
+export const Count = styled.p`
+    font-size: 1rem;
+    font-weight: 600;
+    width: 60px;
+    flex-shrink: 0;
+    color: #8A9198;
 `
 
 export const StarIcon = styled.img`
     height: 18px;
     width: 18px;
-    margin-left: 2px;
-`
-
-export const Count = styled.p`
-    font-size: 1rem;
-    width: 60px;
-    flex-shrink: 0;
-    color: #d4d4d4;
-    text-align: left;
+    margin-left: 4px;
+    margin-top: -1px;
 `
 
 export const ProgressBar = styled.div`

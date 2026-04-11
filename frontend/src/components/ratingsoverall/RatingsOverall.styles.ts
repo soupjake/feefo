@@ -29,6 +29,7 @@ export const ProductRating = styled.div`
     font-weight: 600;
     color: #646c76;
     margin-bottom: 32px;
+    margin-left: 22px;
 `
 
 export const Logo = styled.img`

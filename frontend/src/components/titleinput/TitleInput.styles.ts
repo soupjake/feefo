@@ -30,11 +30,6 @@ export const Button = styled.button`
     border: none;
     border-radius: 6px;
     font-weight: bold;
-    cursor: pointer;
-    &:disabled {
-        background-color: #eee;
-        cursor: not-allowed;
-    }
 `
 
 export const ResultBox = styled.div`

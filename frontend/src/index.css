@@ -23,8 +23,8 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    width: 420px;
-    max-width: 1280px;
+    width: 90%;
+    max-width: 480px;
     margin: 0 auto;
 }
 

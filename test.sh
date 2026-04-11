@@ -20,7 +20,7 @@ echo -e "\n${GREEN}Running Frontend Tests...${NC}"
 if [ -d "./frontend" ]; then
     cd frontend || exit
     
-    if npm run test -- run; then
+    if npm run test -- run --reporter=verbose; then
         echo -e "${GREEN}Frontend tests passed!${NC}"
     else
         echo -e "${RED}Frontend tests failed!${NC}"

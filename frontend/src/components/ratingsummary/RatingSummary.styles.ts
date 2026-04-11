@@ -24,7 +24,7 @@ export const Count = styled.p`
     font-weight: 600;
     width: 60px;
     flex-shrink: 0;
-    color: #8A9198;
+    color: #8a9198;
 `
 
 export const StarIcon = styled.img`

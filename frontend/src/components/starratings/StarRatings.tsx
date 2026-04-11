@@ -14,7 +14,7 @@ export const StarRatings = ({ rating }: Props) => {
 
                 return (
                     <S.StarContainer key={index}>
-                        <S.StarFilled $width={fillPercentage} />
+                        <S.StarFilled $width={fillPercentage} data-testid="star-fill" />
                         <S.StarIcon src={star} alt="star-icon" />
                     </S.StarContainer>
                 )

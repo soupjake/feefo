@@ -18,7 +18,7 @@ export const RatingSummary = (props: Props) => {
                 <S.StarIcon src={star_grey} alt="star-icon" />
             </S.Score>
             <S.ProgressBar>
-                <S.ProgressBarFill $width={width} />
+                <S.ProgressBarFill $width={width} data-testid="progress-bar-fill" />
             </S.ProgressBar>
             <S.Count>{rating.count}</S.Count>
         </S.Container>

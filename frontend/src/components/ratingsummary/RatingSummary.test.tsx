@@ -30,17 +30,11 @@ describe("RatingSummary Component", () => {
     })
 
     it("should pass the correctly calculated width to the progress bar", () => {
-        const { container } = render(<RatingSummary rating={mockRating} />)
+        render(<RatingSummary rating={mockRating} />)
 
-        const fill = container.querySelector('div[class*="ProgressBarFill"]')
+        const fill = screen.getByTestId("progress-bar-fill")
 
-        // Note: Checking styled-component props can be tricky.
-        // If the width is applied as a style attribute, use this:
-        // expect(fill).toHaveStyle(`width: 85%`)
-
-        // If it's a transient prop ($width) used inside the CSS template,
-        // the best way to verify it is often by checking the computed style
-        // or ensuring the component didn't crash.
         expect(fill).toBeInTheDocument()
+        expect(fill).toHaveStyle("width: 85%")
     })
 })

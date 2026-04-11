@@ -28,6 +28,7 @@ export const TitleInput = () => {
                 <S.Input
                     type="text"
                     placeholder="Enter a title..."
+                    aria-label="Job title"
                     value={inputValue}
                     onChange={handleChange}
                 />

@@ -53,7 +53,6 @@ describe("RatingsOverall Component", () => {
         const mockLabel = "Excellent"
 
         vi.mocked(ratingHelpers.getRatingLabel).mockReturnValue(mockLabel)
-
         ;(useAppSelector as any).mockImplementation((selector: any) => {
             if (selector.name === "selectRatingsOverall") return mockScore
             if (selector.name === "selectRatingsLoading") return false

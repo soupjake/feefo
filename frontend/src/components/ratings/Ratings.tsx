@@ -24,7 +24,7 @@ export const Ratings = () => {
     return (
         <S.Container>
             {ratings.map((rating: Rating) => (
-                <RatingSummary rating={rating} />
+                <RatingSummary key={rating.score} rating={rating} />
             ))}
         </S.Container>
     )

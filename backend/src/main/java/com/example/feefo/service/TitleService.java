@@ -33,21 +33,21 @@ public class TitleService {
         );
     }
 
-private double calculateScore(String input, String target) {
-    String[] inputWords = input.toLowerCase().split(" ");
-    String[] targetWords = target.toLowerCase().split(" ");
+    private double calculateScore(String input, String target) {
+        String[] inputWords = input.toLowerCase().split(" ");
+        String[] targetWords = target.toLowerCase().split(" ");
 
-    double matches = 0;
-    for (String targetWord : targetWords) {
-        for (String inputWord : inputWords) {
-            if (inputWord.equals(targetWord)) {
-                matches++;
-                break;
+        double matches = 0;
+        for (String targetWord : targetWords) {
+            for (String inputWord : inputWords) {
+                if (inputWord.equals(targetWord)) {
+                    matches++;
+                    break;
+                }
             }
         }
-    }
 
-    int maxWords = Math.max(inputWords.length, targetWords.length);
-    return matches / maxWords;
-}
+        int maxWords = Math.max(inputWords.length, targetWords.length);
+        return matches / maxWords;
+    }
 }

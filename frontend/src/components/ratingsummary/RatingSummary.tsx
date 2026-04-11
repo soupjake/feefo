@@ -18,7 +18,15 @@ export const RatingSummary = (props: Props) => {
                 <S.StarIcon src={star_grey} alt="star-icon" />
             </S.Score>
             <S.ProgressBar>
-                <S.ProgressBarFill $width={width} data-testid="progress-bar-fill" />
+                <S.ProgressBarFill
+                    $width={width}
+                    data-testid="progress-bar-fill"
+                    role="progressbar"
+                    aria-label={`${rating.score} star ratings`}
+                    aria-valuenow={width}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                />
             </S.ProgressBar>
             <S.Count>{rating.count}</S.Count>
         </S.Container>

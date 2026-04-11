@@ -15,7 +15,7 @@ describe("StarRatings Component", () => {
 
     it("should calculate widths correctly for a whole number rating (e.g., 3)", () => {
         render(<StarRatings rating={3} />)
-    
+
         const fills = screen.getAllByTestId("star-fill")
 
         expect(fills[0]).toHaveStyle("width: 100%")
@@ -27,7 +27,7 @@ describe("StarRatings Component", () => {
 
     it("should calculate widths correctly for a partial rating (e.g., 3.5)", () => {
         render(<StarRatings rating={3.5} />)
-        
+
         const fills = screen.getAllByTestId("star-fill")
 
         expect(fills[0]).toHaveStyle("width: 100%")
